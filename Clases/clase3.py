@@ -1,3 +1,4 @@
+
 #Definir la cantidad de filas y columnas
 
 m1 =[[-1,2,3],[4,-5,6],[7,8,9]]
@@ -61,7 +62,9 @@ for i in range(filas):
     for j in range(columnas):
         valor=int(input(f"Ingrese un elemento en la pos [{i}][{j}]: "))
         m2[i].append(valor)
+print("- - - - - - - - - - - - - - - - - -")
 print(m2)
+print("- - - - - - - - - - - - - - - - - -")
 #Promedio de los elementos
 
 acum2=0
@@ -71,11 +74,93 @@ for i in range (len(m1)):
         acum=acum+i
 promedio=acum/m1[i][j]
 print("El promedio de los elementos es: ",promedio)
-print("@By Blaviken")
+print("- - - - - - - - - - - - - - - - - -")
 
 #retorne la sumatoria de la diagonal principal de la matriz
 
+sumato_prin=0
+for i in range(len(m2)):
+    for j in range(len(m2[0])):
+        if j == i:
+            sumato_prin=sumato_prin+m2[i][j]
+print(f"Sumatoria de diagonal principal: {sumato_prin}")
+print(" ")
 
+#principal es mayor o no que la diagonal secundaria
 
-#realice un algoritmo que diga si la sumatoria de la diagonal
-#principal es mayor a no que la diagonal secundaria
+sumato_secu=0
+j=0
+for i in range(len(m2)):
+    sumato_secu=sumato_secu+m2[i][len(m2[0])- 1 -j]
+    j=j+1
+print(f"Sumatoria de diagonal secundaria: {sumato_secu}")
+print(" ")
+if sumato_prin > sumato_secu:
+    print("La diagonal principal es mayor")
+    print(" ")
+elif sumato_prin < sumato_secu:
+    print("La diagonal secundaria es mayor")
+    print(" ")
+else:
+    print("Las dos diagonales tienen el mismo valor")
+    print(" ")
+
+print("@By Blaviken-fsociety")
+
+################################################################
+#Letras
+################################################################
+
+m_u = [["x"," "," "," ","x"], ["x"," "," "," ","x"], ["x"," "," "," ","x"], ["x"," "," "," ","x"], ["x","x","x","x","x"]]
+m_o = [["x","x","x","x","x"], ["x"," "," "," ","x"], ["x"," "," "," ","x"], ["x"," "," "," ","x"], ["x","x","x","x","x"]]
+m_l = [["x"," "," "," "," "], ["x"," "," "," "," "], ["x"," "," "," "," "], ["x"," "," "," "," "], ["x","x","x","x","x"]]
+m_n = [["x"," "," "," ","x"], ["x","x"," "," ","x"], ["x"," ","x"," ","x"], ["x"," "," ","x","x"], ["x"," "," "," ","x"]]
+m_c = [["x","x","x","x","x"], ["x"," "," "," "," "], ["x"," "," "," "," "], ["x"," "," "," "," "], ["x","x","x","x","x"]]
+m_x = [["x"," "," "," ","x"], [" ","x"," ","x"," "], [" "," ","x"," "," "], [" ","x"," ","x"," "], ["x"," "," "," ","x"]]
+m_z = [["x","x","x","x","x"], [" "," "," ","x"," "], [" "," ","x"," "," "], [" ","x"," "," "," "], ["x","x","x","x","x"]]
+
+for i in range (len(m_u)):
+    for j in range(len(m_u)):
+        print(m_u[i][j],end=" ")
+    print("")
+print("============================================================")
+
+for i in range (len(m_o)):
+    for j in range(len(m_o)):
+        print(m_o[i][j],end=" ")
+    print("")
+
+print("============================================================")
+
+for i in range (len(m_l)):
+    for j in range(len(m_l)):
+        print(m_l[i][j],end=" ")
+    print("")
+
+print("============================================================")
+
+for i in range (len(m_n)):
+    for j in range(len(m_n)):
+        print(m_n[i][j],end=" ")
+    print("")
+
+print("============================================================")
+
+for i in range (len(m_c)):
+    for j in range(len(m_c)):
+        print(m_c[i][j],end=" ")
+    print("")
+
+print("============================================================")
+
+for i in range (len(m_x)):
+    for j in range(len(m_x)):
+        print(m_x[i][j],end=" ")
+    print("")
+
+print("============================================================")
+
+for i in range (len(m_z)):
+    for j in range(len(m_z)):
+        print(m_z[i][j],end=" ")
+    print("")
