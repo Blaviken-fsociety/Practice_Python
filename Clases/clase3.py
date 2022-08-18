@@ -105,8 +105,6 @@ else:
     print("Las dos diagonales tienen el mismo valor")
     print(" ")
 
-print("@By Blaviken-fsociety")
-
 ################################################################
 #Letras
 ################################################################
@@ -164,3 +162,7 @@ for i in range (len(m_z)):
     for j in range(len(m_z)):
         print(m_z[i][j],end=" ")
     print("")
+
+print("============================================================",end=" ")
+
+print("@By Blaviken-fsociety")
