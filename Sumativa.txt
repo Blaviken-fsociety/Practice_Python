@@ -1,0 +1,61 @@
+filas=int(input("Ingrese el nuemero de filas"))
+columnas=int(input("Ingrese el numero de columnas"))
+matriz=[]
+for i in range(filas):
+    matriz.append([])
+    for j in range(columnas):
+        valor=float(input("Fila{},Columna{}:".format(i+1,j+1)))
+        matriz[i].append(valor)
+print()
+
+m1=[[8,14,-6],
+    [12,7,4]
+    [-11,3,21]]
+matrix_length=len(m1)
+for i in range(matrix_length):
+    print(m1[i][-1])
+
+filas=int(input("Ingrese el nuemero de filas"))
+columnas=int(input("Ingrese el numero de columnas"))
+matriz=[]
+for i in range(filas):
+    matriz.append([])
+    for j in range(columnas):
+        valor=float(input("Fila{},Columna{}:".format(i+1,j+1)))
+        matriz[i].append(valor)
+print()
+for columnas in matriz:
+    print("[",end=" ")
+    for elemento in columnas:
+        print("{:8.2f}".format(elemento),end=" ")
+    print("]")
+print(" ")
+suma=0
+f=int(input("Ingrese la fila"))
+for i in range(len(matriz)):
+    suma+=matriz[f][i]
+print(suma)
+
+filas=int(input("Ingrese el nuemero de filas"))
+columnas=int(input("Ingrese el numero de columnas"))
+matriz=[]
+for i in range(filas):
+    matriz.append([])
+    for j in range(columnas):
+        valor=float(input("Fila{},Columna{}:".format(i+1,j+1)))
+        matriz[i].append(valor)
+print()
+for columnas in matriz:
+    print("[",end=" ")
+    for elemento in columnas:
+        print("{:8.2f}".format(elemento),end=" ")
+    print("]")
+print(" ")
+con=0
+
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
+        if (matriz[i][j]<0):
+            matriz[i][j]=matriz[i][j]*-1
+print(matriz)
+
