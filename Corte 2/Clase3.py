@@ -34,6 +34,82 @@ class Matrices():
             print("]")
           
 class Operadoraiones():
+
+    def suma(self):
+        print(a)
+        print("Suma de matrices: ")
+        print(a)
+        filas = len(self.getParte1().getMatriz())
+        columnas = len(self.getParte1().getMatriz()[0])
+        matriz3 = []
+        for i in range(filas):
+            matriz3.append([])
+            for j in range(columnas):
+                x = self.getParte1().getMatriz()[i][j] + self.getParte2().getMatriz()[i][j]
+                matriz3[i].append(x)
+        
+        for i in range(filas):
+            print("[", end="")
+            for j in range(columnas):
+                if j != columnas - 1:
+                    print(f"{matriz3[i][j]}", end=" ")
+                else:
+                    print(f"{matriz3[i][j]}", end="")
+            print("]")
+
+    def resta(self):
+        print(a)
+        print("Resta de matrices: ")
+        print(a)
+        filas = len(self.getParte1().getMatriz())
+        columnas = len(self.getParte1().getMatriz()[0])
+        matriz3 = []
+        for i in range(filas):
+            matriz3.append([])
+            for j in range(columnas):
+                x = self.getParte1().getMatriz()[i][j] - self.getParte2().getMatriz()[i][j]
+                matriz3[i].append(x)
+        
+        for i in range(filas):
+            print("[", end="")
+            for j in range(columnas):
+                if j != columnas - 1:
+                    print(f"{matriz3[i][j]}", end=" ")
+                else:
+                    print(f"{matriz3[i][j]}", end="")
+            print("]")
+
+    def multi(self):
+        print(a)
+        print("Multiplicación de matrices: ")
+        print(a)
+        m1 = self.getParte1().getMatriz()
+        m2 = self.getParte2().getMatriz()
+
+        if len(m1[0]) == len(m2):
+            matriz3 = []
+            for i in range(len(m1)):
+                matriz3.append([])
+                for j in range(len(m2[0])):
+                    matriz3[i].append(0)
+
+            for i in range(len(m1)):
+                for j in range(len(m2[0])):
+
+                    for k in range(len(m1[0])):
+                        matriz3[i][j] = matriz3[i][j] + m1[i][k] * m2[k][j]
+
+            for i in range(len(matriz3)):
+                print("[", end="")
+                for j in range(len(matriz3[0])):
+                    if j != len(matriz3[0]) - 1:
+                        print(f"{matriz3[i][j]}", end=" ")
+                    else:
+                        print(f"{matriz3[i][j]}", end="")
+                print("]")
+        else:
+           print("No se pueden multiplicar")
+
     def __init__(self):
         self.__matriz1 = Matrices()
         self.__matriz2 = Matrices()
@@ -203,82 +279,7 @@ class Operadoraiones():
         print(f"Dígito menor en la matriz 1: {menor_parte1}")
         print(f"Dígito menor en la matriz 2: {menor_parte2}")
         print(f"Promedio en la matriz 1: {prom_parte1}")
-        print(f"Promedio en la matriz 2: {prom_parte2}")
-
-    def suma(self):
-        print(a)
-        print("Suma de matrices: ")
-        print(a)
-        filas = len(self.getParte1().getMatriz())
-        columnas = len(self.getParte1().getMatriz()[0])
-        matriz3 = []
-        for i in range(filas):
-            matriz3.append([])
-            for j in range(columnas):
-                x = self.getParte1().getMatriz()[i][j] + self.getParte2().getMatriz()[i][j]
-                matriz3[i].append(x)
-        
-        for i in range(filas):
-            print("[", end="")
-            for j in range(columnas):
-                if j != columnas - 1:
-                    print(f"{matriz3[i][j]}", end=" ")
-                else:
-                    print(f"{matriz3[i][j]}", end="")
-            print("]")
-
-    def resta(self):
-        print(a)
-        print("Resta de matrices: ")
-        print(a)
-        filas = len(self.getParte1().getMatriz())
-        columnas = len(self.getParte1().getMatriz()[0])
-        matriz3 = []
-        for i in range(filas):
-            matriz3.append([])
-            for j in range(columnas):
-                x = self.getParte1().getMatriz()[i][j] - self.getParte2().getMatriz()[i][j]
-                matriz3[i].append(x)
-        
-        for i in range(filas):
-            print("[", end="")
-            for j in range(columnas):
-                if j != columnas - 1:
-                    print(f"{matriz3[i][j]}", end=" ")
-                else:
-                    print(f"{matriz3[i][j]}", end="")
-            print("]")
-
-    def multi(self):
-        print(a)
-        print("Multiplicación de matrices: ")
-        print(a)
-        m1 = self.getParte1().getMatriz()
-        m2 = self.getParte2().getMatriz()
-
-        if len(m1[0]) == len(m2):
-            matriz3 = []
-            for i in range(len(m1)):
-                matriz3.append([])
-                for j in range(len(m2[0])):
-                    matriz3[i].append(0)
-
-            for i in range(len(m1)):
-                for j in range(len(m2[0])):
-
-                    for k in range(len(m1[0])):
-                        matriz3[i][j] = matriz3[i][j] + m1[i][k] * m2[k][j]
-
-            for i in range(len(matriz3)):
-                print("[", end="")
-                for j in range(len(matriz3[0])):
-                    if j != len(matriz3[0]) - 1:
-                        print(f"{matriz3[i][j]}", end=" ")
-                    else:
-                        print(f"{matriz3[i][j]}", end="")
-                print("]")
-        else:
-           print("No se pueden multiplicar") 
+        print(f"Promedio en la matriz 2: {prom_parte2}") 
         
 def main():
 
@@ -293,13 +294,13 @@ def main():
     m3 = Operadoraiones()
     m3.setParte1(m1)
     m3.setParte2(m2)
-    m3.Comparar_Diagonal_Principal()
-    m3.Comparar_Elementos_de_Matrices()
-    m3.Comparar_Diagonal_Secundaria()
     m3.suma()
     m3.resta()
     m3.multi()
-
+    m3.Comparar_Diagonal_Principal()
+    m3.Comparar_Elementos_de_Matrices()
+    m3.Comparar_Diagonal_Secundaria()
+    
 main()
 
 print(a)
