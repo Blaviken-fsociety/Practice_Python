@@ -8,7 +8,7 @@ print("m1[0][0]: ", m1[0][0]) #Primera posición
 print("m1[2][2]: ", m1[2][2]) #Última posición
 print("Sumatoria de de elementos columna 0: ", m1[0][0]+m1[1][0]+m1[2][0]) #Sumatoria de de elementos columna 0
 
-#Somatoria de elementos de la matriz
+#Sumatoria de elementos de la matriz
 print("filas: ", len(m1))
 print("columnas: ", len(m1[1]))
 
