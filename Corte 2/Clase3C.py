@@ -1,5 +1,9 @@
 a="\n"
 
+print(a)
+print("Ejercicio C")
+print(a)
+
 class Matrices():
     def __init__(self):
         self.__matriz = []

@@ -1,0 +1,146 @@
+Algoritmo sin_titulo
+	Definir Brasil, Chile, Argentina, Ecuador, Perú, Paraguay, Uruguay, Colombia Como Entero
+	Definir cuartos1, cuartos2, cuartos3, cuartos4 Como Caracter
+	Definir semis1, semis2, semis3, semis4, gol1_tercer_cuarto, gol2_tercer_cuarto, gol1_Final, gol2_Final Como Entero
+	Escribir "Primer partido de cuartos"
+	Escribir " "
+	Escribir "Brasil VS Chile"
+	Escribir " "
+	Escribir "¿Cuántos goles metió Brasil?"
+	Leer Brasil
+	Escribir "¿Cuántos goles metió Chile?"
+	Leer Chile
+	Si Brasil>Chile Entonces
+		Escribir "Brasil pasa a semifinal"
+		cuartos1<-"Brasil"
+	SiNo
+		Escribir "Chile pasa a semifinal"
+		cuartos1<-"Chile"
+	Fin Si
+	Escribir "Segundo partido de cuartos"
+	Escribir " "
+	Escribir "Perú VS Paraguay"
+	Escribir " "
+	Escribir "¿Cuántos goles metió Perú?"
+	Leer Perú
+	Escribir "¿Cuántos goles metió Paraguay?"
+	Leer Paraguay
+	Si Perú>Paraguay Entonces
+		Escribir "Perú pasa a semifinal"
+		cuartos2<-"Perú"
+	SiNo
+		Escribir "Paraguay pasa a semifinal"
+		cuartos2<-"Paraguay"
+	Fin Si
+	Escribir "Tercer partido de cuartos"
+	Escribir " "
+	Escribir "Argentina VS Ecuador"
+	Escribir " "
+	Escribir "¿Cuántos goles metió Argentina?"
+	Leer Argentina
+	Escribir "¿Cuántos goles metió Ecuador?"
+	Leer Ecuador
+	Si Argentina>Ecuador Entonces
+		Escribir "Argentina pasa a semifinal"
+		cuartos3<-"Argentina"
+	SiNo
+		Escribir "Ecuador pasa a semifinal"
+		cuartos3<-"Ecuador"
+	Fin Si
+	Escribir "Cuarto partido de cuartos de final"
+	Escribir " "
+	Escribir "Uruguay VS Colombia"
+	Escribir " "
+	Escribir "¿Cuántos goles metió Uruguay?"
+	Leer Uruguay
+	Escribir "¿Cuántos goles metió Colombia?"
+	Leer Colombia
+	Si Uruguay>Colombia Entonces
+		Escribir "Uruguay pasa a semifinal"
+		cuartos4<-"Uruguay"
+	SiNo
+		Escribir "Colombia pasa a semifinal"
+		cuartos4<-"Colombia"
+	Fin Si
+	Escribir ""
+	Escribir "Semifinales"
+	Escribir ""
+	Escribir "Primer partido de semifinales"
+	Escribir " "
+	Escribir cuartos1, " VS " , cuartos2
+	Escribir " "
+	Escribir "¿Cuántos goles metió ", cuartos1,"?"
+	Leer semis1
+	Escribir "¿Cuántos goles metió ", cuartos2,"?"
+	Leer semis2
+	Si semis1>semis2 Entonces
+		Escribir cuartos1," pasa a la Final"
+		Final1<-cuartos1
+		Tercer_cuarto1<-cuartos2
+	SiNo
+		Escribir cuartos2," pasa a la Final"
+		Final1<-cuartos2
+		Tercer_cuarto1<-cuartos1
+	Fin Si
+	Escribir "Segundo partido de semifinales"
+	Escribir " "
+	Escribir cuartos3, " VS " , cuartos4
+	Escribir " "
+	Escribir "¿Cuántos goles metió ", cuartos3,"?"
+	Leer semis3
+	Escribir "¿Cuántos goles metió ", cuartos4,"?"
+	Leer semis4
+	Si semis3>semis4 Entonces
+		Escribir cuartos3," pasa a la Final"
+		Final2<-cuartos3
+		Tercer_cuarto2<-cuartos4
+	SiNo
+		Escribir cuartos4," pasa a la Final"
+		Final2<-cuartos4
+		Tercer_cuarto2<-cuartos3
+	Fin Si
+	Escribir ""
+	Escribir "Se define el 3er y el 4to puesto"
+	Escribir " "
+	Escribir Tercer_cuarto1, " VS " , Tercer_cuarto2
+	Escribir " "
+	Escribir "¿Cuántos goles metió ", Tercer_cuarto1,"?"
+	Leer gol1_tercer_cuarto
+	Escribir "¿Cuántos goles metió ", Tercer_cuarto2,"?"
+	Leer gol2_tercer_cuarto
+	Si gol1_tercer_cuarto>gol2_tercer_cuarto Entonces
+		Escribir Tercer_cuarto1," se lleva el Tercer lugar de la Copa América"
+		Tercero<-Tercer_cuarto1
+		Cuarto<-Tercer_cuarto2
+	SiNo
+		Escribir Tercer_cuarto2," se lleva el Tercer lugar de la Copa América"
+		Tercero<-Tercer_cuarto2
+		Cuarto<-Tercer_cuarto1
+	Fin Si
+	Escribir "Final de la Copa América"
+	Escribir "Se define el 1er y el 2do puesto"
+	Escribir " "
+	Escribir Final1, " VS " , Final2
+	Escribir " "
+	Escribir "¿Cuántos goles metió ", Final1,"?"
+	Leer gol1_Final
+	Escribir "¿Cuántos goles metió ", Final2,"?"
+	Leer gol2_Final
+	Si gol1_Final>gol2_Final Entonces
+		Escribir Final1," es el Campeón de América"
+		Primero<-Final1
+		Tow<-Final2
+	SiNo
+		Escribir Final2," es el Campeón de América"
+		Primero<-Final2
+		Tow<-Final1
+	Fin Si
+	Escribir ""
+	Escribir Primero," es el Campeón"
+	Escribir ""
+	Escribir Tow, " es el Subcampeón"
+	Escribir ""
+	Escribir Tercero, "se lleva el tercer puesto"
+	Escribir ""
+	Escribir Cuarto,"se lleva el cuarto puesto"
+FinAlgoritmo
